@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Container, Box, Grid, TextField, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const Chatpage = () => {
   const [msg,setMsg]=useState("")
+  let history=useNavigate()
   const onSendMsg=(e)=>{
     e.preventDefault()
     setMsg({...msg,[e.target.name]:e.target.value})
+    history("/upload")
   }
   return (
     <div>

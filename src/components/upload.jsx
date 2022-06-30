@@ -42,8 +42,8 @@ export const GetImage = () => {
           ) : (
             <div>
               <h1>Image details</h1>
-
-              <table>
+              <center>
+              <table >
                 <thead>
                   <tr>
                     <th>ID</th>
@@ -75,6 +75,7 @@ export const GetImage = () => {
                   })}
                 </tbody>
               </table>
+              </center>
             </div>
           )}
         </div>

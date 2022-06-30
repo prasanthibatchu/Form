@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Container, Grid, Button } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { ReusableTextField } from "./reusabletext";
 
@@ -9,7 +9,7 @@ const axios = require("axios");
 export const Edit = () => {
   let { id } = useParams();
   const [user, setUsers] = useState({ name: "", email: "", phno: "" });
-
+  let history=useNavigate()
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(0);
   useEffect(() => {
@@ -43,10 +43,10 @@ export const Edit = () => {
     } else if (!user.email.includes("@")) {
       setErr(2);
       alert("Please enter a valid email id");
-    } else if (user.mobile.length !== 10) {
+    } else if (user.phno.length !== 10) {
       setErr(3);
-      alert("Please enter a valid 10 digit mobilenumber");
-    } else {
+      alert("please enter phno");
+     } else {
       const formdata = new FormData();
       formdata.append("name", user.name);
       formdata.append("email", user.email);
@@ -56,6 +56,7 @@ export const Edit = () => {
       axios.post("/update_users", formdata).then(function(response) {
         if (response.data.status === true) {
           console.log(response.data);
+          history("/data")
         } else {
           alert(response.data.msg);
         }

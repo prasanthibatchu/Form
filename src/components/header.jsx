@@ -1,12 +1,20 @@
 import React from "react";
 import { AppBar, Toolbar, Grid, Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import logo from './prasanthi.jpeg'
 export const Header = () => {
   return (
     <div>
       <AppBar position="sticky">
         <Toolbar>
+        <a href="/">
+            <img
+              src={logo}
+              height="50"
+              width="50"
+              style={{ borderRadius: "50%" }}
+            />
+          </a>
           <Grid
             container
             direction="row"

@@ -8,12 +8,14 @@ import {Edit} from './components/edit'
 import {Chatpage} from './components/chat'
 import { Signout } from './components/signout';
 import { UserContext } from './components/context';
+import { Footer } from './components/footer';
 import {BrowserRouter as Router,Routes,Route, Navigate} from 'react-router-dom'
 
 function App() {
     const [userP,setUserP]=useState(null) 
     return (
-      <div className="App">
+      <div className="page-container">
+      <div className="content-wrap">
         <UserContext.Provider value={{userP,setUserP}}>
        <Router>
         <Header />
@@ -30,7 +32,9 @@ function App() {
         </Routes>
        </Router>
        </UserContext.Provider>
-      </div>
+       </div>
+      <Footer />
+    </div>
     );
   
 }

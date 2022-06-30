@@ -1,11 +1,17 @@
-.App {
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
+}
+.content-wrap {
+  flex: 1;
 }
 table, td, th {
   border: 1px solid black;
 }s
 table {
-
+  text-align: center;
   border-collapse: collapse;
   width: 50%;
   margin: auto;

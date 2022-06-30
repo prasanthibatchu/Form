@@ -15,7 +15,7 @@ export const Signout = () => {
             spacing={2}
           >
             <Grid item>
-                <Button variant="contained">signout</Button>
+                <Button variant="contained"><a href="/signin" style={{textDecoration:"none",color:"white"}}>signout</a></Button>
             </Grid>
           </Grid>
         </Box>

@@ -145,7 +145,7 @@ export const Signup = () => {
     conpass: "",
   });
   const [err, setErr] = useState(0);
-  const [img, setImg] = useState([]);
+  // const [img, setImg] = useState([]);
   const [pic, setPic] = useState("");
 
   let history = useNavigate();
