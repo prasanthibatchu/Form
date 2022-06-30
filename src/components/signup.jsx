@@ -4,7 +4,7 @@ import {
   Grid,
   Button,
   Avatar,
-  ButtonBase,
+  
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -54,7 +54,7 @@ export const GetUsers = () => {
 
   return (
     <div>
-      {loading ? (
+           {loading ? (
         <h3>Fetching Please wait....</h3>
       ) : (
         <div>
@@ -176,7 +176,7 @@ export const Signup = () => {
       formdata.append("mobileno", user.phno);
       formdata.append("password", user.pass);
       formdata.append("conpassword", user.conpass);
-      formdata.append("file_name", img);
+      // formdata.append("file_name", img);
       formdata.append("dpic", pic.raw);
       console.log(formdata);
       axios.post("/signup", formdata).then(function (res) {

@@ -14,7 +14,7 @@ export const Signin = () => {
     const [err, setErr] = useState(0);
    
   
-    // let history = useNavigate();
+    let history = useNavigate();
   
     const validataion = () => {
       setErr(0);
@@ -35,7 +35,7 @@ export const Signin = () => {
         axios.post("/signin", formdata).then(function (res) {
           if (res.data.status === true) {
            
-            // history("/upload");
+           history('/msg')
           } else {
             console.log(res.status);
             alert(res.data.msg);
