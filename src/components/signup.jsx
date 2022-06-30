@@ -3,11 +3,11 @@ import {
   Box,
   Grid,
   Button,
-  Avatar,
-  ButtonBase,
+  Avatar
+  
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ReusableTextField } from "./reusabletext";
 import "../App.css";
 const axios = require("axios");
